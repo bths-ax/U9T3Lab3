@@ -11,6 +11,7 @@ public class Shape {
 	public static final String RECTANGLE = "Rectangle"; // constant for rectangle
 	public static final String OVAL = "Oval";           // constant for oval
 	public static final String ARC = "Arc";
+	public static final String LINE = "Line";
 
 	// private instance variables
 	private Color color; // color to draw shape in
@@ -19,7 +20,7 @@ public class Shape {
 
 	/** Constructor */
 	public Shape() {
-		color = Color.black;
+		color = Color.WHITE;
 		p1 = new Point();
 		p2 = new Point();
 	}
@@ -43,6 +44,9 @@ public class Shape {
 	public int getMinY() {
 		return Math.min(p1.y, p2.y);
 	}
+
+	public Point getP1() { return p1; }
+	public Point getP2() { return p2; }
 
 	/**
 	 * Method to get the width of the bounding rectangle
